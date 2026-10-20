@@ -1,159 +1,203 @@
-# college-reading-literacy-analysis
-A data science research project analyzing factors associated with reading fluency and comprehension among college students using statistical analysis and machine learning.
-# Reading Fluency and Comprehension Among College Students
+# Reading Fluency and Comprehension Among Adult Readers
 
 ### An Educational Data Science & Machine Learning Research Project
 
 ## Project Overview
 
-This project investigates the linguistic, cognitive, behavioral, and educational factors associated with reading fluency and reading comprehension among college and university students.
+This project investigates the linguistic, cognitive, behavioral, educational, and contextual factors associated with reading fluency and reading comprehension among adult readers.
 
-Using statistical analysis, data visualization, and machine learning, the research aims to identify patterns in reading performance and determine which measurable factors are most strongly associated with students' ability to read efficiently and understand complex academic texts.
+Using statistical analysis, data visualization, and machine learning, the research aims to identify patterns in adult reading performance and determine which measurable factors are most strongly associated with individuals' ability to read efficiently and comprehend written information.
 
-The long-term objective is to contribute to evidence-based educational research and explore how data science can support academic literacy and student success in higher education.
+The broader objective is to contribute to evidence-based adult literacy research and explore how data science can improve our understanding of reading performance, educational development, and lifelong learning.
 
-**Project Status:** Phase 1 — Research Problem Definition
+**Project Status:** Phase 2 — Dataset Identification and Evaluation
 
-**Research Domain:** Educational Data Science | Learning Analytics | Machine Learning | Literacy Research
+**Research Domain:** Educational Data Science | Learning Analytics | Machine Learning | Adult Literacy Research
+
+**Target Population:** Adult readers aged 18 years and older
 
 ---
 
 ## Research Problem
 
-Reading fluency and reading comprehension are closely related but distinct dimensions of literacy.
+Reading fluency and reading comprehension are related but distinct dimensions of literacy.
 
-- **Reading Fluency:** The ability to read text accurately, at an appropriate rate, and with suitable expression.
-- **Reading Comprehension:** The ability to understand, interpret, integrate, and evaluate information presented in written text.
+**Reading Fluency** refers to the ability to read text accurately, at an appropriate rate, and with suitable expression. Reading efficiency and automaticity may also be relevant depending on the assessment.
 
-College students may demonstrate strong reading fluency while still experiencing difficulty comprehending complex academic material.
+**Reading Comprehension** refers to the ability to understand, interpret, integrate, and evaluate information presented in written texts.
 
-This project seeks to understand which factors are most strongly associated with differences in these reading outcomes.
+Adult readers demonstrate varying levels of reading performance, potentially associated with differences in vocabulary knowledge, cognitive abilities, reading behaviors, educational experiences, and reading environments.
+
+Understanding these relationships may help researchers identify factors associated with adult literacy and inform future educational research.
+
+### Primary Research Question
+
+**Which linguistic, cognitive, behavioral, educational, and contextual factors are most strongly associated with reading fluency and reading comprehension among adult readers?**
 
 ## Research Objectives
 
-1. Identify factors associated with reading fluency among college and university students.
-2. Identify factors associated with reading comprehension.
-3. Examine the relationship between reading fluency and comprehension.
-4. Investigate how linguistic, cognitive, behavioral, and educational characteristics relate to reading performance.
-5. Develop and evaluate statistical and machine learning models to examine the predictive value of these factors.
-6. Communicate findings that may inform future educational research and academic support initiatives.
+1. Identify measurable factors associated with adult reading fluency.
+2. Identify factors associated with adult reading comprehension.
+3. Examine the relationship between fluency and comprehension.
+4. Investigate associations involving vocabulary knowledge, cognitive abilities, reading behaviors, and educational experiences.
+5. Compare the predictive value of selected variables using statistical analysis and machine learning.
+6. Interpret findings in the context of adult literacy and educational research.
 
 ## Research Questions
 
-**Primary Research Question:**
+**RQ1:** Which factors are most strongly associated with reading fluency among adult readers?
 
-Which linguistic, cognitive, behavioral, and educational factors are most strongly associated with differences in reading fluency and reading comprehension among college and university students?
+**RQ2:** Which factors are most strongly associated with reading comprehension?
 
-**Supporting Questions:**
+**RQ3:** What is the relationship between reading fluency and reading comprehension in adult populations?
 
-- RQ1: Which factors are most strongly associated with reading fluency?
-- RQ2: Which factors are most strongly associated with reading comprehension?
-- RQ3: What is the relationship between reading fluency and comprehension?
-- RQ4: Do reading habits, motivation, vocabulary knowledge, and academic experiences explain additional variation in reading outcomes?
-- RQ5: Can statistical and machine learning models identify the most informative predictors of reading performance?
+**RQ4:** To what extent do reading behaviors, vocabulary knowledge, cognitive abilities, and educational experiences explain variation in adult reading performance?
+
+**RQ5:** Can statistical and machine learning models identify informative predictors of reading fluency and comprehension?
 
 ## Research Hypotheses
 
 | ID | Hypothesis |
 |---|---|
-| H1 | Vocabulary knowledge is positively associated with reading comprehension. |
-| H2 | Word recognition and decoding accuracy are positively associated with reading fluency. |
-| H3 | Reading fluency and comprehension are positively correlated but remain distinct outcomes. |
-| H4 | Reading habits and motivation explain additional variation in reading performance. |
-| H5 | Background knowledge and reasoning ability contribute to differences in comprehension. |
+| H1 | Vocabulary knowledge will be positively associated with reading comprehension. |
+| H2 | Word recognition accuracy and decoding ability will be positively associated with reading fluency. |
+| H3 | Reading fluency and comprehension will exhibit a positive statistical association. |
+| H4 | Reading behaviors and educational experiences will explain additional variation after accounting for foundational reading skills. |
+| H5 | Background knowledge and reasoning abilities will be positively associated with reading comprehension after accounting for relevant reading skills. |
 
-These hypotheses will be evaluated using available research data.
+These hypotheses have not yet been tested.
+
+## Research Population
+
+The target population consists of adult readers aged 18 years and older.
+
+Depending on dataset availability, the study may include:
+
+- College and university students
+- Working adults
+- Adult learners
+- Adults with varying educational backgrounds
+- Native and nonnative English readers, when supported by the selected dataset
+
+The final sample and generalizability of findings will depend on the selected data source.
 
 ## Potential Research Variables
 
-The following variables are candidates for investigation, subject to dataset availability and measurement validity.
-
-| Category | Potential Variables |
+| Category | Candidate Variables |
 |---|---|
-| Linguistic | Vocabulary knowledge, decoding accuracy, syntactic knowledge |
+| Linguistic | Vocabulary knowledge, decoding accuracy, word recognition |
 | Cognitive | Working memory, attention, reasoning ability |
-| Behavioral | Reading frequency, motivation, reading strategies |
-| Educational | Academic preparation, prior instruction, educational resources |
-| Contextual | Text difficulty, subject familiarity, language background |
+| Behavioral | Reading frequency, reading motivation, reading strategies |
+| Educational | Educational attainment, literacy instruction, academic background |
+| Contextual | Passage difficulty, text genre, language experience |
+| Demographic | Age and other ethically appropriate background variables |
 
-**Primary Outcome Variables:**
-- Reading fluency assessment scores
-- Reading comprehension assessment scores
+### Primary Outcome Variables
 
-The final variable definitions and measurement methods will be determined during the data collection phase.
+1. Reading fluency or a validated adult reading-efficiency measure.
+2. Reading comprehension assessment performance.
+
+The final operational definitions will be determined after selecting and evaluating the datasets.
 
 ---
 
 ## Research Methodology
 
-The project will follow an extended data science life cycle informed by the CRISP-DM framework.
+The project follows a data science life cycle informed by CRISP-DM.
 
 ### Phase 1: Problem Definition
+
 - Establish the research problem.
 - Identify the target population.
-- Develop research questions and hypotheses.
-- Define potential outcome and predictor variables.
+- Develop research questions.
+- Establish hypotheses.
+- Identify potential variables.
 
-### Phase 2: Data Collection
-- Identify credible educational research datasets.
-- Evaluate data quality and availability.
-- Verify that assessments are appropriate for college students.
-- Review dataset permissions, limitations, and documentation.
+**Status: Completed**
+
+### Phase 2: Data Collection and Evaluation
+
+- Identify credible adult literacy datasets.
+- Examine participant demographics and sampling methods.
+- Verify available fluency and comprehension measurements.
+- Evaluate data quality, access conditions, and licensing.
+- Select appropriate datasets for analysis.
+
+**Status: In Progress**
 
 ### Phase 3: Data Cleaning and Preparation
-- Examine missing values.
-- Identify duplicates and inconsistencies.
-- Assess outliers and data distributions.
-- Prepare reproducible data-processing pipelines.
+
+- Inspect missing values and duplicates.
+- Evaluate data consistency and measurement validity.
+- Address data quality issues.
+- Prepare reproducible preprocessing pipelines.
 
 ### Phase 4: Exploratory Data Analysis
-- Analyze descriptive statistics.
-- Visualize reading performance distributions.
+
+- Analyze reading performance distributions.
 - Investigate relationships between variables.
-- Identify potential patterns and confounding factors.
+- Develop statistical summaries.
+- Produce visualizations.
 
 ### Phase 5: Feature Engineering
-- Select and transform relevant predictors.
-- Encode categorical features.
-- Standardize numerical variables when appropriate.
+
+- Identify relevant predictors.
+- Encode categorical variables.
+- Transform features where appropriate.
 - Prevent data leakage.
 
 ### Phase 6: Statistical Analysis and Machine Learning
-- Perform correlation analysis.
-- Develop regression models.
-- Compare machine learning approaches.
-- Investigate predictive relationships.
 
-Potential models include:
-- Linear and regularized regression
-- Random Forest
-- Gradient Boosting / XGBoost
+- Conduct correlation analysis.
+- Develop regression models.
+- Compare predictive algorithms.
+- Investigate feature importance and model interpretation.
+
+Candidate models include linear regression, regularized regression, Random Forest, and gradient boosting.
 
 ### Phase 7: Model Evaluation
-- Evaluate model performance on held-out data.
+
+- Evaluate generalization performance.
+- Compare predictions against baseline models.
 - Examine prediction errors.
-- Assess model interpretability.
-- Investigate bias, uncertainty, and limitations.
+- Investigate uncertainty and potential bias.
 
 ### Phase 8: Visualization and Deployment
+
 - Develop research visualizations.
-- Create an interactive dashboard if appropriate.
-- Present findings in an accessible format.
+- Create an optional interactive dashboard.
+- Document findings and model limitations.
 
 ### Phase 9: Research Communication
-- Summarize findings.
-- Discuss educational implications.
-- Document limitations.
-- Identify opportunities for future research.
+
+- Prepare the final research report.
+- Summarize statistical findings.
+- Discuss implications for adult literacy research.
+- Identify directions for future study.
 
 ---
 
+## Candidate Research Datasets
+
+The following datasets are being evaluated.
+
+| Dataset | Research Relevance | Selection Status |
+|---|---|---|
+| OneStop Eye Movements | Adult reading behavior and comprehension | Under evaluation |
+| PIAAC | Adult literacy and educational background | Under evaluation |
+| GECO | Reading processes and eye movements | Under evaluation |
+| CELER | Reading behavior across language backgrounds | Under evaluation |
+
+Dataset inclusion has not been finalized.
+
+A dataset containing eye-tracking measurements will not automatically be considered a direct measure of reading fluency.
+
 ## Proposed Technology Stack
 
-| Category | Technologies |
+| Purpose | Technology |
 |---|---|
 | Programming | Python |
-| Data Manipulation | Pandas, NumPy |
+| Data Processing | Pandas, NumPy |
 | Statistical Analysis | SciPy, Statsmodels |
 | Visualization | Matplotlib, Seaborn |
 | Machine Learning | Scikit-learn, XGBoost |
@@ -161,14 +205,12 @@ Potential models include:
 | Version Control | Git, GitHub |
 | Dashboard (Optional) | Streamlit |
 
-*The technology stack may change as research and dataset requirements become clearer.*
+The final technology stack may change according to the analytical requirements.
 
 ## Repository Structure
 
-The repository will be organized as development progresses.
-
 ```text
-college-reading-literacy-analysis/
+adult-reading-literacy-analysis/
 │
 ├── data/
 │   ├── raw/
@@ -178,7 +220,8 @@ college-reading-literacy-analysis/
 │   ├── problem_statement.md
 │   ├── research_questions.md
 │   ├── methodology.md
-│   └── data_dictionary.md
+│   ├── data_dictionary.md
+│   └── dataset_sources.md
 │
 ├── notebooks/
 │   ├── 01_data_exploration.ipynb
@@ -187,10 +230,8 @@ college-reading-literacy-analysis/
 │   └── 04_machine_learning.ipynb
 │
 ├── src/
-│
 ├── reports/
 │   └── figures/
-│
 ├── tests/
 │
 ├── .gitignore
@@ -198,74 +239,76 @@ college-reading-literacy-analysis/
 └── README.md
 ```
 
-Directories and notebooks listed above are planned and will be added during the relevant development phases.
+This is the planned repository structure. Files and directories will be added as the corresponding research phases begin.
 
 ## Project Roadmap
 
 - [x] Define the research problem.
-- [x] Identify the target student population.
-- [x] Establish initial research questions.
+- [x] Establish the adult reader population.
+- [x] Develop initial research questions.
 - [x] Develop preliminary hypotheses.
-- [x] Identify potential research variables.
-- [ ] Locate and evaluate suitable research datasets.
-- [ ] Finalize the data dictionary and methodology.
-- [ ] Perform data cleaning and exploratory analysis.
-- [ ] Conduct statistical modeling.
-- [ ] Develop and compare machine learning models.
-- [ ] Evaluate and interpret results.
-- [ ] Develop visualizations or a dashboard.
+- [x] Identify candidate research variables.
+- [x] Identify initial dataset candidates.
+- [ ] Verify dataset access, measurements, and suitability.
+- [ ] Select the primary research dataset.
+- [ ] Finalize the data dictionary.
+- [ ] Perform data cleaning and preparation.
+- [ ] Conduct exploratory data analysis.
+- [ ] Perform statistical modeling.
+- [ ] Develop machine learning models.
+- [ ] Evaluate model performance and interpretability.
+- [ ] Develop research visualizations or a dashboard.
 - [ ] Publish the final research report.
 
 ## Research Ethics and Limitations
 
-This project will prioritize responsible educational data science practices.
+This research emphasizes responsible data science practices.
 
-Research considerations include:
+Considerations include:
 
-- Protecting student privacy and confidentiality.
-- Using datasets with appropriate permissions.
-- Evaluating the validity of reading assessment instruments.
-- Recognizing sampling bias and measurement limitations.
-- Assessing model performance across relevant student populations.
+- Protecting participant privacy and confidentiality.
+- Following data licensing and access restrictions.
+- Using appropriate reading assessment instruments.
+- Evaluating sampling bias and measurement limitations.
+- Assessing potential disparities in model performance.
 - Avoiding unsupported causal conclusions.
 
-**Important:** Statistical associations and machine learning feature importance do not establish causation.
+**Statistical association does not establish causation. Machine learning feature importance does not establish causal influence.**
 
-Any predictions or findings will be interpreted within the limitations of the available data.
-
-## Expected Outcomes
+## Expected Research Deliverables
 
 The project aims to produce:
 
-1. A reproducible analysis of factors associated with reading fluency and comprehension.
-2. Statistical summaries and data visualizations.
-3. Evaluated predictive models.
-4. An interpretable comparison of influential predictors.
-5. A research report describing findings, limitations, and educational implications.
-6. A documented portfolio project demonstrating applied educational data science skills.
+1. A documented dataset selection process.
+2. Reproducible data preprocessing and analysis.
+3. Statistical findings on adult reading performance.
+4. Evaluated machine learning models.
+5. Research visualizations.
+6. A comparison of factors associated with reading fluency and comprehension.
+7. A final research report.
 
-These are intended deliverables, not completed research findings.
+These are intended outcomes, not completed findings.
 
 ## Future Research Opportunities
 
 Potential future extensions include:
 
 - AI-assisted reading comprehension tools.
-- Personalized learning recommendations.
-- Academic reading interventions.
-- Comparative analysis across educational disciplines.
-- Longitudinal research on college-level literacy development.
+- Personalized adult literacy learning systems.
+- Reading interventions and literacy support.
+- Comparisons across educational backgrounds.
+- Longitudinal investigations of adult reading development.
 
 ## Project Author
 
 **Shawn Watson**
 
-Undergraduate researcher interested in educational data science, artificial intelligence, machine learning, and the application of technology to improving student learning outcomes.
+Undergraduate researcher interested in educational data science, artificial intelligence, machine learning, literacy, and the application of technology to learning and educational outcomes.
 
 ## Project Status
 
-**Current Phase:** Phase 1 — Problem Definition
+**Current Phase:** Phase 2 — Dataset Identification and Evaluation
 
-**Next Phase:** Phase 2 — Data Collection and Dataset Evaluation
+**Next Milestone:** Verify and select appropriate adult reading research datasets.
 
-This repository will be updated throughout the research and development process.
+This repository will be updated throughout the research process.
