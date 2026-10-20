@@ -1,246 +1,318 @@
 # Data Dictionary
 
-**Project:** Reading Fluency and Comprehension Among College and University Students  
+**Project:** Reading Fluency and Comprehension Among Adult Readers  
 **Research Domain:** Educational Data Science and Machine Learning  
-**Research Phase:** Phase 1 — Problem Definition  
-**Document Status:** Preliminary Data Dictionary  
+**Target Population:** Adults aged 18 years and older  
+**Research Phase:** Phase 2 — Dataset Identification and Evaluation  
+**Document Version:** 0.1 — Preliminary  
 **Dataset Status:** Not Yet Selected
 
 ---
 
 ## 1. Purpose
 
-This data dictionary documents the proposed variables, definitions, data types, measurement methods, and intended analytical roles for the research project.
+This document defines the proposed variables, data types, measurement methods, and analytical roles for the research project.
 
-The study aims to identify linguistic, cognitive, behavioral, and educational factors associated with reading fluency and reading comprehension among college and university students.
+The study aims to identify linguistic, cognitive, behavioral, educational, and contextual factors associated with reading fluency and reading comprehension among adult readers.
 
-The dictionary will be updated once an appropriate research dataset has been selected and its actual variables have been verified.
+This dictionary contains conceptual variable definitions. Actual dataset column names, permitted values, missing-value codes, and assessment scoring rules will be documented after a dataset is selected.
 
 ## 2. Unit of Analysis
 
-The proposed unit of analysis is an individual college or university student's reading assessment.
+The proposed unit of analysis is an adult participant's reading assessment.
 
-If the selected dataset contains multiple assessments per student, the analysis will account for repeated observations.
+Depending on the dataset, observations may represent:
 
-No personally identifying student information will be published in this repository.
+- Individual adult participants.
+- Participant-passage combinations.
+- Repeated reading assessments.
+- Individual reading trials.
+
+Repeated observations from the same participant will not be treated as independent without an appropriate statistical justification.
+
+Participant and passage identifiers may be required to support valid analysis.
 
 ## 3. Dependent Variables
 
-Dependent variables represent the primary reading outcomes being investigated.
+Dependent variables represent the reading outcomes under investigation.
 
-| Variable | Description | Data Type | Measurement |
-|---|---|---|---|
-| `reading_fluency_score` | Student reading fluency or efficiency | Float | Validated assessment score |
-| `reading_comprehension_score` | Student understanding of written material | Float | Validated comprehension assessment |
+| Variable | Description | Proposed Type |
+|---|---|---|
+| `reading_fluency_score` | Validated reading fluency or efficiency outcome | Float |
+| `reading_comprehension_score` | Performance on a reading comprehension assessment | Float |
 
-### Reading Fluency
+### 3.1 Reading Fluency
 
 Reading fluency involves accurate, appropriately paced, and expressive reading.
 
 Potential measurements include:
 
 - Correct words per minute.
-- Word-reading accuracy.
+- Word recognition accuracy.
 - Oral reading prosody.
-- Validated adult reading-efficiency scores.
+- Validated adult reading fluency assessments.
+- Standardized reading-efficiency scores.
 
-Because this research focuses on college students, the measurement instrument must be appropriate for adult readers.
+Reading speed, total reading time, and eye-movement measures may be analyzed as distinct reading-process indicators. They must not automatically be labeled as measures of full reading fluency.
 
-### Reading Comprehension
+### 3.2 Reading Comprehension
 
-Reading comprehension refers to the ability to understand, interpret, integrate, and evaluate written information.
+Reading comprehension describes an individual's ability to understand, interpret, integrate, and evaluate written information.
 
-Potential measurements include:
+Possible measurements include:
 
-- Standardized comprehension assessment scores.
-- Passage-based comprehension performance.
-- Inferential question accuracy.
-- Academic text interpretation assessments.
+- Standardized reading comprehension scores.
+- Passage-level comprehension accuracy.
+- Literal and inferential question performance.
+- Academic or functional literacy assessment results.
 
-Raw scores from different instruments must not be combined without an appropriate measurement justification.
+The final outcome definition will depend on the scoring procedures of the selected assessment.
 
 ## 4. Independent Variables
 
-Independent variables are candidate predictors whose associations with reading outcomes will be investigated.
+Independent variables are potential predictors of adult reading performance.
 
 ### 4.1 Linguistic Factors
 
-| Variable | Description | Data Type |
+| Variable | Description | Proposed Type |
 |---|---|---|
 | `vocabulary_score` | Vocabulary knowledge assessment | Float |
 | `decoding_accuracy` | Accuracy of word decoding | Float |
 | `word_recognition_score` | Word recognition ability | Float |
 | `syntactic_knowledge_score` | Understanding of grammatical structures | Float |
-| `morphological_awareness` | Ability to recognize meaningful word components | Float |
+| `morphological_awareness` | Understanding of meaningful word components | Float |
+| `language_proficiency_score` | Language proficiency assessment | Float |
 
-**Research relevance:** Linguistic abilities may be associated with both reading efficiency and comprehension.
+These factors may help explain differences in word recognition, reading efficiency, and text comprehension.
 
 ### 4.2 Cognitive Factors
 
-| Variable | Description | Data Type |
+| Variable | Description | Proposed Type |
 |---|---|---|
-| `working_memory_score` | Working memory assessment performance | Float |
-| `attention_score` | Performance on an attention assessment | Float |
+| `working_memory_score` | Working memory assessment | Float |
+| `attention_score` | Attention assessment performance | Float |
 | `reasoning_ability_score` | Reasoning assessment performance | Float |
-| `metacognitive_awareness` | Awareness and monitoring of thinking processes | Float |
+| `metacognitive_awareness` | Awareness of cognitive processes | Float |
 
-**Research relevance:** Cognitive processes may contribute to how students process, retain, and interpret written information.
+These variables represent possible cognitive correlates of reading performance.
+
+The final analysis will use validated measurements where available.
 
 ### 4.3 Behavioral Factors
 
-| Variable | Description | Data Type |
+| Variable | Description | Proposed Type |
 |---|---|---|
-| `reading_frequency` | Frequency of reading activities | Integer or Float |
-| `reading_duration` | Time spent reading during a defined period | Float |
+| `reading_frequency` | Reading frequency over a defined period | Integer or Float |
+| `reading_duration` | Time spent reading within a defined period | Float |
 | `reading_motivation_score` | Reading motivation assessment | Float |
-| `reading_strategy_score` | Use of reading comprehension strategies | Float |
+| `reading_strategy_score` | Reported or assessed use of reading strategies | Float |
+| `reading_purpose` | Purpose of reading activity | Categorical |
 
-**Research relevance:** Reading behaviors and motivation may be associated with differences in performance.
+Reading frequency and duration must include a clearly defined reference period and unit.
 
 ### 4.4 Educational Factors
 
-| Variable | Description | Data Type |
+| Variable | Description | Proposed Type |
 |---|---|---|
-| `academic_year` | Year or level of university study | Categorical |
-| `academic_major` | Student's academic discipline | Categorical |
-| `prior_academic_preparation` | Prior educational preparation | Float or Categorical |
-| `literacy_support_access` | Access to academic reading support | Boolean or Categorical |
-| `institution_type` | Type of postsecondary institution | Categorical |
+| `education_level` | Highest educational attainment | Categorical |
+| `years_of_education` | Completed years of formal education | Float |
+| `educational_enrollment` | Current education enrollment status | Categorical |
+| `prior_literacy_instruction` | Documented literacy instruction experience | Categorical |
+| `adult_education_participation` | Participation in adult learning programs | Boolean or Categorical |
 
-**Research relevance:** Educational experiences may help explain differences in academic reading development.
+Educational background may help explain differences in literacy experiences and assessment performance.
 
-### 4.5 Contextual Factors
+### 4.5 Contextual and Reading-Task Factors
 
-| Variable | Description | Data Type |
+| Variable | Description | Proposed Type |
 |---|---|---|
-| `background_knowledge_score` | Familiarity with passage subject matter | Float |
-| `text_difficulty` | Complexity of reading material | Float or Categorical |
-| `text_genre` | Type of reading material | Categorical |
-| `reading_format` | Digital or printed text | Categorical |
+| `background_knowledge_score` | Knowledge of passage subject matter | Float |
+| `text_difficulty` | Standardized text complexity | Float or Categorical |
+| `text_genre` | Category of reading material | Categorical |
+| `reading_format` | Digital or print reading format | Categorical |
 | `language_background` | Documented language-learning background | Categorical |
+| `passage_id` | Identifier for reading passage | String |
 
-**Research relevance:** Reading comprehension can depend on both the reader and the characteristics of the text.
+Text characteristics may be important when interpreting performance across different reading tasks.
 
-## 5. Potential Control Variables
+## 5. Additional Adult Population Variables
 
-Control variables may help account for alternative explanations of observed relationships.
+Because the target population includes adult readers rather than only university students, the following variables may be relevant.
+
+| Variable | Description | Proposed Type |
+|---|---|---|
+| `participant_age` | Participant age in years | Integer |
+| `employment_status` | Employment category | Categorical |
+| `occupation_category` | Occupational classification | Categorical |
+| `education_level` | Educational attainment | Categorical |
+| `years_of_education` | Formal education duration | Float |
+| `language_background` | Language experience | Categorical |
+| `adult_learning_status` | Participation in adult education | Categorical |
+
+These variables may function as predictors, controls, or subgroup descriptors depending on the research design.
+
+Sensitive or potentially identifying variables will be used only when justified and permitted.
+
+## 6. Reading-Process Indicators
+
+Some candidate datasets contain behavioral measurements collected during reading.
+
+These measures may help characterize reading processes but should not automatically be interpreted as direct fluency measures.
+
+| Variable | Description | Proposed Type |
+|---|---|---|
+| `total_reading_time` | Time spent reading a passage | Float |
+| `reading_rate` | Words read per unit of time | Float |
+| `fixation_duration` | Eye fixation duration | Float |
+| `fixation_count` | Number of recorded fixations | Integer |
+| `regression_count` | Number of backward eye movements | Integer |
+| `rereading_frequency` | Frequency of rereading behavior | Integer or Float |
+
+All time measurements must specify their units.
+
+If reading rate is calculated from passage length and reading time, the derived measurement procedure must be documented.
+
+When analyzing comprehension, reading-process indicators measured during the same task must be distinguished from information available before the task.
+
+## 7. Potential Control Variables
+
+Potential controls include:
+
+- Participant age.
+- Language background.
+- Educational attainment.
+- Text difficulty.
+- Passage genre.
+- Reading condition.
+- Assessment instrument.
+- Dataset or research study identifier.
+
+Control variable selection will depend on the research design and a documented rationale.
+
+## 8. Dataset Identification Variables
+
+If multiple research datasets are used, source information must be retained.
 
 | Variable | Description |
 |---|---|
-| `age` | Student age |
-| `academic_year` | Educational level |
-| `institution_id` | Deidentified institution identifier |
-| `language_background` | Relevant language experience |
-| `text_difficulty` | Reading passage complexity |
+| `dataset_id` | Dataset identifier |
+| `dataset_source` | Original data source |
+| `participant_id` | Deidentified participant identifier |
+| `assessment_id` | Reading assessment identifier |
+| `passage_id` | Reading passage identifier |
+| `assessment_date` | Assessment date, if available and permitted |
 
-Control variables will be selected according to the research question, theoretical justification, and available data.
+Identifiers will support reproducibility and appropriate treatment of repeated measurements.
 
-A variable may serve as a predictor, control, or moderator in different analyses.
+They must not reveal identifiable participant information in the public repository.
 
-## 6. Variable Measurement Requirements
+## 9. Data Types and Measurement Standards
 
-For every variable included in the final dataset, the following information must be documented:
+The following conventions will guide the final dictionary.
 
-1. Actual dataset column name.
-2. Variable definition.
-3. Data type.
-4. Unit of measurement.
-5. Assessment instrument or data collection method.
-6. Valid range or permitted categories.
-7. Missing-value representation.
-8. Data source.
-9. Collection time or assessment period.
-10. Relevant limitations.
+**Integer:** Whole-number values, such as fixation counts.
 
-For questionnaire-based variables, the final dictionary should also record the scale and scoring direction.
+**Float:** Continuous numerical values, such as assessment scores or reading durations.
 
-For example, higher values should not automatically be interpreted as greater motivation unless the instrument documentation confirms this.
+**Categorical:** Variables representing defined groups, such as educational attainment.
 
-## 7. Data Quality Requirements
+**Boolean:** Variables containing true/false values.
 
-The selected dataset will be examined for:
+**String:** Textual identifiers or labels.
 
-- Missing observations.
-- Duplicate records.
-- Invalid data types.
-- Out-of-range values.
-- Inconsistent category labels.
-- Implausible assessment scores.
-- Measurement reliability.
-- Potential selection bias.
+All continuous measures must have documented units and valid ranges.
 
-Data quality findings will be documented before statistical modeling.
+Categorical variables must have documented coding schemes.
 
-## 8. Missing Data Handling
+## 10. Data Quality Requirements
 
-Missing-value procedures will depend on the selected dataset.
+The selected dataset will be evaluated for:
 
-Potential approaches include:
+1. Missing values.
+2. Duplicate observations.
+3. Inconsistent data types.
+4. Invalid or implausible scores.
+5. Unclear measurement units.
+6. Inconsistent categorical values.
+7. Unreliable assessment measures.
+8. Sampling and selection bias.
+9. Potential data leakage.
+10. Incomplete documentation.
 
-- Describing missingness by variable.
-- Examining patterns of missing observations.
+Data quality findings will be recorded before formal statistical analysis.
+
+## 11. Missing Data Handling
+
+Missing-value procedures will be selected based on the dataset and research objectives.
+
+Possible approaches include:
+
+- Missingness summaries.
 - Complete-case analysis where justified.
-- Statistical imputation where appropriate.
-- Sensitivity analysis.
+- Statistical imputation.
+- Missingness indicators.
+- Sensitivity analyses.
 
-Missing values will not automatically be replaced with zero or a variable's mean.
+Missing data will not automatically be replaced with zero or the mean.
 
-For predictive modeling, imputation parameters must be estimated using training data only.
+For predictive modeling, imputation procedures will be fitted using training data only.
 
-## 9. Data Privacy and Ethical Considerations
+## 12. Dataset Variable Availability
 
-The project will follow responsible educational data practices.
+Each proposed variable will be assigned an availability status after dataset selection.
 
-The public GitHub repository must not contain:
-
-- Student names.
-- Student identification numbers.
-- Private educational records.
-- Confidential assessment results.
-- Credentials or access tokens.
-- Restricted datasets without redistribution permission.
-
-Deidentified data will be handled according to the applicable access agreement and institutional requirements.
-
-## 10. Data Dictionary Validation
-
-After choosing a dataset, each proposed variable will be assigned one of three statuses:
-
-| Status | Meaning |
+| Status | Definition |
 |---|---|
-| Available | Variable exists and can be appropriately measured |
-| Derived | Variable can be constructed using documented source fields |
-| Unavailable | Variable cannot be measured using the selected dataset |
+| Available | Directly measured in the dataset |
+| Derived | Can be constructed from documented source variables |
+| Unavailable | Cannot be measured using the dataset |
 
-Unavailable variables will not be fabricated or replaced by unrelated proxies.
+Variables marked unavailable will not be fabricated or replaced with unrelated measurements.
 
-Any major differences between proposed and available variables will require reconsideration of the research questions.
+Research questions and model specifications may be revised based on variable availability.
 
-## 11. Future Updates
+## 13. Research Ethics and Privacy
 
-This dictionary will evolve through the following stages:
+This project will follow responsible data science practices.
 
-**Version 0.1 — Preliminary**
+The public GitHub repository must not include:
 
-Initial proposed variables and conceptual definitions.
+- Personally identifiable participant records.
+- Private educational records.
+- Restricted research data without redistribution permission.
+- Credentials or access tokens.
+- Confidential participant-level assessment information.
 
-**Version 0.2 — Dataset Selection**
+Participant privacy, licensing requirements, and institutional research obligations will be respected.
 
-Actual dataset fields, source information, and availability classifications.
+## 14. Dictionary Versioning
 
-**Version 1.0 — Analysis-Ready**
+### Version 0.1 — Preliminary
 
-Final variable definitions, transformations, coding schemes, missing-value rules, and measurement documentation.
+Conceptual variables and proposed measurements.
 
-## 12. Next Steps
+**Current version**
 
-1. Identify datasets containing college-level reading assessments.
-2. Evaluate whether both fluency and comprehension are measured.
-3. Verify the availability of relevant predictors.
-4. Review dataset permissions and assessment validity.
-5. Update this dictionary with actual dataset column names and measurement details.
+### Version 0.2 — Dataset Selection
+
+Verified dataset column names, data types, scoring procedures, source documentation, and variable availability.
+
+### Version 1.0 — Analysis-Ready
+
+Final variable definitions, coding schemes, preprocessing decisions, transformations, and measurement limitations.
+
+## 15. Next Steps
+
+1. Compare candidate adult reading datasets.
+2. Verify dataset access and licensing.
+3. Identify available reading outcome measures.
+4. Determine whether fluency and comprehension can both be analyzed.
+5. Review available linguistic, cognitive, behavioral, and educational predictors.
+6. Select the primary dataset.
+7. Update this dictionary using verified dataset fields.
 
 ---
 
-**Current Status:** Preliminary — No Dataset Selected  
-**Next Phase:** Phase 2 — Data Collection and Dataset Evaluation
+**Current Status:** Preliminary Data Dictionary  
+**Research Phase:** Phase 2 — Dataset Identification and Evaluation  
+**Next Milestone:** Primary Dataset Selection
